@@ -69,7 +69,7 @@ if (videoCols) {
         }
         if (item.parentNode.classList.contains("swiper")) {
             let swiper = new Swiper(item.parentNode, {
-                slidesPerView: 2,
+                slidesPerView: item.parentNode.getAttribute('data-slide-count') || 2,
                 spaceBetween: 20,
                 observer: true,
                 observeParents: true,
